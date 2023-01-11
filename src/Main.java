@@ -26,7 +26,9 @@ public class Main {
             String discount = scanner.nextLine();
             production[i][4]= discount;
         }
-        Product product = new Product();
-
+    }
+    public double totalAmount(int price,  int quantity, double discount) {
+        double total;
+        return total = price * quantity * discount;
     }
 }
