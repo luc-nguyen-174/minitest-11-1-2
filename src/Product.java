@@ -60,8 +60,17 @@ public class Product {
         return price * quantity;
     }
 
-    public double getAmountDiscount() {
-        return price * discount * (quantity/100);
+    public double getAmountAfterDiscount() {
+        return price * (1 - discount / 100) * quantity;
     }
 
+
+    @Override
+    public String toString() {
+        return "Mã sản phẩm=" + id +
+                ", tên sản phầm: " + name +
+                ", giá: " + price +
+                ", số lượng: " + quantity +
+                ", giảm giá: " + discount + "%";
+    }
 }
